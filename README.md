@@ -10,6 +10,8 @@ A small script made for ASUS routers running Merlin firmware, which is trying to
 
 - Asus router with Merlin Firmware installed (https://asuswrt.lostrealm.ca). Tested on latest release 384.5
 - JFFS enabled
+- Entware ( https://github.com/RMerl/asuswrt-merlin/wiki/Entware )
+- jq ( opkg install jq )
 
 
 ## Installation:
