@@ -6,8 +6,8 @@
 
 ### user variables
 tmpfile=/tmp/_tmpcurl.tmp
-detectlist=/mnt/sandisk-usb/pmd/ww2-server-detect.txt
-banlist=/mnt/sandisk-usb/pmd/ww2-server-ban.txt
+detectlist=/jffs/ww2-server-detect.txt
+banlist=/jffs/pmd/ww2-server-ban.txt
 
 echo " ######################################################################################################### "
 echo "#                                                                                                         #" 
@@ -22,7 +22,7 @@ echo ""
 
 rm -f $tmpfile 
 
-echo ">>start playing. trying to detect Activision COD server..."
+echo ">>start playing online. trying to detect Activision COD server..."
 
 tophost=`tcpdump -tnn -c 500 -i any dst port 3074 | awk -F "." '{print $1"."$2"."$3"."$4}' | sort | uniq -c | sort -nr | head -1 | awk '{print $3 "\t"}'` >/dev/null 2>&1 
 srvip="$(echo -e "${tophost}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
