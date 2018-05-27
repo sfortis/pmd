@@ -12,6 +12,7 @@ A small script made for ASUS routers running Merlin firmware, which is trying to
 
 ## Installation:
 
-1. Download the script in /JFFS partition
+1. Download the script in /JFFS partition 
+  (login, cd /jffs, wget https://raw.githubusercontent.com/sfortis/pmd/master/pmd.sh )
 2. Give execution permissions ( chmod +x pmd.sh )
 3. Edit the script and customize the variables / paths.
