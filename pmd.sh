@@ -24,7 +24,7 @@ rm -f $tmpfile
 
 echo ">>start playing online. trying to detect Activision COD server..."
 
-tophost=`tcpdump -tnn -c 500 -i any dst port 3074 | awk -F "." '{print $1"."$2"."$3"."$4}' | sort | uniq -c | sort -nr | head -1 | awk '{print $3 "\t"}'` >/dev/null 2>&1 
+tophost=`tcpdump -tnn -c 500 -i any dst port 3074 and not src port 3074 | awk -F "." '{print $1"."$2"."$3"."$4}' | sort | uniq -c | sort -nr | head -1 | awk '{print $3 "\t"}'` >/dev/null 2>&1 
 srvip="$(echo -e "${tophost}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
 echo "Server detected : $srvip"
 
