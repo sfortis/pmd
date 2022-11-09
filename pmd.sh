@@ -9,8 +9,8 @@
 usb_drive_path=/mnt/USB_DRIVE #<---- enter your usb drive path
 
 tmpfile=/tmp/_tmpcurl.tmp
-detectlist=$usb_drive_path/pmd/cod-server-detect.txt  # <---- prefer a USB path
-banlist=$usb_drive_path/pmd/cod-server-ban.txt  # <---- prefer a USB path
+detectlist=$usb_drive_path/pmd/cod-server-detect.txt
+banlist=$usb_drive_path/pmd/cod-server-ban.txt
 input=a
 datetime=`date +%d/%m/%Y-%H%M%S`
 
