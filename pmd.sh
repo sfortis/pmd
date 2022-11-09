@@ -5,11 +5,23 @@
 
 
 ### user variables
+
+usb_drive_path=/mnt/USB_DRIVE #<---- enter your usb drive path
+
 tmpfile=/tmp/_tmpcurl.tmp
-detectlist=/mnt/USB_DRIVE/pmd/cod-server-detect.txt  # <---- prefer a USB path
-banlist=/mnt/USB_DRIVE/pmd/cod-server-ban.txt  # <---- prefer a USB path
-input=zzz
+detectlist=$usb_drive_path/pmd/cod-server-detect.txt  # <---- prefer a USB path
+banlist=$usb_drive_path/pmd/cod-server-ban.txt  # <---- prefer a USB path
+input=a
 datetime=`date +%d/%m/%Y-%H%M%S`
+
+### check script home
+if [ -d "$usb_drive_path/pmd" ];
+then
+    echo "script home found, good!"
+else
+	echo "script home not exists, creating..."
+	mkdir $usb_drive_path/pmd
+fi
 
 echo " _____                 _____         ____                "
 echo "|  _  |___ ___ ___ ___|     |___ ___|    \ _ _ _____ ___ "
