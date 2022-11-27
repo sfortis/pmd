@@ -6,7 +6,7 @@
 
 ### user variables
 
-usb_drive_path="/tmp/mnt/$(nvram get usb_path_sda1_label)" #<<--- if there is not usb driver attached change this variable to "usb_drive_path=/jffs"
+usb_drive_path="/tmp/mnt/$(nvram get usb_path_sda1_label)" #<<--- if there is no usb drive attached, change this variable to "usb_drive_path=/jffs"
 
 tmpfile=/tmp/_tmpcurl.tmp
 detectlist=$usb_drive_path/pmd/cod-server-detect.txt
