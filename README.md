@@ -1,5 +1,5 @@
 # pmd
-# poor's man duma
+# poor man's duma
 
 A small script made for ASUS routers running Merlin firmware, which is trying to detect the current Activision server (call of duty series), retrieves geographical IP date and using Skynet ( https://github.com/Adamm00/IPSet_ASUS#help ) allows you to ban the server IP,IP range or the whole country (probable makes no sense, but i added this because i can).
 
